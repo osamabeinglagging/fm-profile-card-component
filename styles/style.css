@@ -35,13 +35,19 @@ img, svg{
 }
 
 main{
+  --offset: 28rem;
+
   font: var(--font-base);
   color: var(--clr-neutral-gray);
+
+  background-color: var(--clr-primary-cyan);
+  background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% - var(--offset)) calc(50% - var(--offset)), calc(50% + var(--offset)) calc(50% + var(--offset));
 
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background-color: var(--clr-primary-cyan);
 }
 
 .card{
@@ -53,6 +59,7 @@ main{
 
   text-align: center;
   background: white;
+  box-shadow: 0.8rem 2rem 2rem hsla(229, 23%, 23%, 0.2);
 }
 
 .card__intro{
@@ -120,7 +127,7 @@ main{
 
 .card__followers span{
   font-size: var(--fs-base);
-  color: var(--clr-primary-cyan);
+  color: var(--clr-primary-dark-blue);
   font-weight: var(--fw-bold);
   display: block;
 }
